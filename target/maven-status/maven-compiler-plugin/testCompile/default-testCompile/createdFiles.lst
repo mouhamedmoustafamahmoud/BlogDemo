@@ -1,0 +1,5 @@
+tests\EmptyFieldTest.class
+tests\PlaceHolderTest.class
+tests\TestBase.class
+tests\SuccessfulSubscriptionTest.class
+tests\EmailFormatTest.class
