@@ -43,7 +43,7 @@ public class EmailFormatTest extends TestBase{
         blogObj = new BlogPage(driver);
 
         // Wait until (Subscribe Button) appears.
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.visibilityOf(blogObj.getSubscribeBtn()));
 
         // Enter the data
@@ -55,8 +55,6 @@ public class EmailFormatTest extends TestBase{
         // Validate Email Format Error Message
         Assert.assertTrue(errorMsg.contains("Enter a valid email address"));
 
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
 
     }
 }

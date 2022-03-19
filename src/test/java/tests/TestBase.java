@@ -11,7 +11,7 @@ public class TestBase {
 
     protected static WebDriver driver;
 
-    @BeforeSuite
+    @BeforeMethod
     @Parameters("browser")
     public void startUp(@Optional("chrome") String browserName){
 
@@ -31,7 +31,7 @@ public class TestBase {
 
     }
 
-    @AfterSuite
+    @AfterMethod
     public void tearDown(){
         driver.quit();
     }

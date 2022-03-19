@@ -29,6 +29,3 @@ mvn clean test
 allure serve allure-results
 ```
 
-## Hints
-- I used *Thread.sleep()* method in some cases instead of Implicit or Explicit Wait and It is not recommended,
-But I used it due to some issues in the Internet velocity.

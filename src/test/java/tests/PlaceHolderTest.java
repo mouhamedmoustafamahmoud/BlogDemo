@@ -15,9 +15,9 @@ public class PlaceHolderTest extends TestBase {
     BlogPage blogObj;
 
     @Test
-    public void verify_PlaceHolders_Of_Fields(){
+    public void verify_PlaceHolders_Of_Fields() {
 
-        // Expecte Place Holders
+        // Expected Placeholders
         String expectedFirstNamePlaceHolder = "Your first name...";
         String expectedLastNamePlaceHolder = "Your last name...";
         String expectedEmailPlaceHolder = "Your email...";
@@ -40,23 +40,21 @@ public class PlaceHolderTest extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         wait.until(ExpectedConditions.visibilityOf(blogObj.getSubscribeBtn()));
 
-        // Actual Place Holders
+        // Actual Placeholders
         String actualFirstNamePlaceHolder = blogObj.getFirstNameTxtField().getAttribute("placeholder");
         String actualLastNamePlaceHolder = blogObj.getLastNameTxtField().getAttribute("placeholder");
         String actualEmailPlaceHolder = blogObj.getEmailTxtField().getAttribute("placeholder");
 
-        // Print Actual Place Holders
+        // Print Actual Placeholders
         System.out.println("First Name Place Holder : " + actualFirstNamePlaceHolder);
         System.out.println("Last Name Place Holder : " + actualLastNamePlaceHolder);
         System.out.println("Email Place Holder : " + actualEmailPlaceHolder);
 
-        // Validate the Place Holders
+        // Validate the Placeholders
         Assert.assertEquals(actualFirstNamePlaceHolder,expectedFirstNamePlaceHolder);
         Assert.assertEquals(actualLastNamePlaceHolder,expectedLastNamePlaceHolder);
         Assert.assertEquals(actualEmailPlaceHolder,expectedEmailPlaceHolder);
 
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
 
     }
 }

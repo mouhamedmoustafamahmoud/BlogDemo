@@ -22,18 +22,16 @@ public class SuccessfulSubscriptionTest extends TestBase{
     BlogPage blogObj;
 
     @Test
-    public void subscribe_With_All_Valid_Data() throws InterruptedException {
+    public void subscribe_With_All_Valid_Data() {
 
         // Create Object from Home Page
         homeObj = new HomePage(driver);
-
 
 
         // Accept the Cookies if exist
         if(homeObj.getAcceptCookiesBtn().isDisplayed()){
             homeObj.getAcceptCookiesBtn().click();
         }
-
 
 
         // Open Blog web page
@@ -57,7 +55,5 @@ public class SuccessfulSubscriptionTest extends TestBase{
         // Validate Success Message
         Assert.assertTrue(blogObj.getSuccessMsg().getText().contains("Thanks"));
 
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
     }
 }

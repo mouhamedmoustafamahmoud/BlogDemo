@@ -152,6 +152,21 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.SuccessfulSubscriptionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="subscribe_With_All_Valid_Data">
+                  </a> <!-- subscribe_With_All_Valid_Data -->
+                  <span class="method-name">subscribe_With_All_Valid_Data</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.EmptyFieldTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -188,21 +203,6 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.PlaceHolderTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verify_PlaceHolders_Of_Fields">
-                  </a> <!-- verify_PlaceHolders_Of_Fields -->
-                  <span class="method-name">verify_PlaceHolders_Of_Fields</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
-          <div class="suite-All_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tests.EmailFormatTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -218,14 +218,14 @@
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.SuccessfulSubscriptionTest</span>
+              <span class="class-name">tests.PlaceHolderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="subscribe_With_All_Valid_Data">
-                  </a> <!-- subscribe_With_All_Valid_Data -->
-                  <span class="method-name">subscribe_With_All_Valid_Data</span>
+                  <a name="verify_PlaceHolders_Of_Fields">
+                  </a> <!-- verify_PlaceHolders_Of_Fields -->
+                  <span class="method-name">verify_PlaceHolders_Of_Fields</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -240,8 +240,8 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;All Test Suite&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Blog Feature Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.PlaceHolderTest&quot;/&gt;
       &lt;class name=&quot;tests.SuccessfulSubscriptionTest&quot;/&gt;
@@ -288,38 +288,38 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'subscribe_With_Empty_First_Name_Field')
-data.setCell(0, 2, 'tests.EmptyFieldTest')
-data.setCell(0, 3, 7312);
+data.setCell(0, 1, 'subscribe_With_All_Valid_Data')
+data.setCell(0, 2, 'tests.SuccessfulSubscriptionTest')
+data.setCell(0, 3, 8008);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'subscribe_With_Empty_Email_Field')
-data.setCell(1, 2, 'tests.EmptyFieldTest')
-data.setCell(1, 3, 7273);
+data.setCell(1, 1, 'verify_PlaceHolders_Of_Fields')
+data.setCell(1, 2, 'tests.PlaceHolderTest')
+data.setCell(1, 3, 5405);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'subscribe_With_Empty_Last_Name_Field')
-data.setCell(2, 2, 'tests.EmptyFieldTest')
-data.setCell(2, 3, 6996);
+data.setCell(2, 1, 'subscribe_With_Invalid_Email_Format')
+data.setCell(2, 2, 'tests.EmailFormatTest')
+data.setCell(2, 3, 2643);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'subscribe_With_All_Empty_Fields')
+data.setCell(3, 1, 'subscribe_With_Empty_First_Name_Field')
 data.setCell(3, 2, 'tests.EmptyFieldTest')
-data.setCell(3, 3, 5157);
+data.setCell(3, 3, 2106);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verify_PlaceHolders_Of_Fields')
-data.setCell(4, 2, 'tests.PlaceHolderTest')
-data.setCell(4, 3, 4004);
+data.setCell(4, 1, 'subscribe_With_Empty_Email_Field')
+data.setCell(4, 2, 'tests.EmptyFieldTest')
+data.setCell(4, 3, 1794);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'subscribe_With_Invalid_Email_Format')
-data.setCell(5, 2, 'tests.EmailFormatTest')
-data.setCell(5, 3, 3475);
+data.setCell(5, 1, 'subscribe_With_Empty_Last_Name_Field')
+data.setCell(5, 2, 'tests.EmptyFieldTest')
+data.setCell(5, 3, 1759);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'subscribe_With_All_Valid_Data')
-data.setCell(6, 2, 'tests.SuccessfulSubscriptionTest')
-data.setCell(6, 3, 3034);
+data.setCell(6, 1, 'subscribe_With_All_Empty_Fields')
+data.setCell(6, 2, 'tests.EmptyFieldTest')
+data.setCell(6, 3, 1495);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -334,36 +334,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.EmptyFieldTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">startUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.EmailFormatTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">startUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.SuccessfulSubscriptionTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">startUp</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-All_Test_Suite" class="panel">
@@ -373,54 +346,99 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.PlaceHolderTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="configuration-method before">
                 <span class="method-name">startUp(chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verify_PlaceHolders_Of_Fields</span>
-                <span class="method-start">18351 ms</span>
+                <span class="method-start">33159 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">38708 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SuccessfulSubscriptionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">40500 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_All_Valid_Data</span>
-                <span class="method-start">22917 ms</span>
+                <span class="method-start">54908 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">62921 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.EmailFormatTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">63951 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_Invalid_Email_Format</span>
-                <span class="method-start">25963 ms</span>
+                <span class="method-start">77539 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">80184 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.EmptyFieldTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">81236 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_All_Empty_Fields</span>
-                <span class="method-start">29443 ms</span>
+                <span class="method-start">92954 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">94457 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">95525 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_Empty_First_Name_Field</span>
-                <span class="method-start">34619 ms</span>
+                <span class="method-start">104072 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">106219 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">107386 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_Empty_Last_Name_Field</span>
-                <span class="method-start">41937 ms</span>
+                <span class="method-start">117106 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">118867 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startUp(chrome)</span>
+                <span class="method-start">119930 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">subscribe_With_Empty_Email_Field</span>
-                <span class="method-start">48936 ms</span>
+                <span class="method-start">129482 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.PlaceHolderTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">56491 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">131278 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

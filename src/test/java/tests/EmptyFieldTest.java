@@ -23,18 +23,15 @@ public class EmptyFieldTest extends TestBase {
     BlogPage blogObj;
 
     @Test(priority = 0)
-    public void subscribe_With_All_Empty_Fields() throws InterruptedException {
+    public void subscribe_With_All_Empty_Fields() {
 
         // Create Object from Home Page
         homeObj = new HomePage(driver);
-
-        Thread.sleep(3000);
 
         // Accept the Cookies if exist
         if(homeObj.getAcceptCookiesBtn().isDisplayed()){
             homeObj.getAcceptCookiesBtn().click();
         }
-
 
         // Open Blog web page
         homeObj.getBlogLink().click();
@@ -53,17 +50,19 @@ public class EmptyFieldTest extends TestBase {
         int noOfErrorMessages = blogObj.getErrorMessages().size();
         Assert.assertEquals(noOfErrorMessages, 3);
 
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
 
     }
 
     @Test(priority = 1)
-    public void subscribe_With_Empty_First_Name_Field() throws InterruptedException {
+    public void subscribe_With_Empty_First_Name_Field() {
 
-        // Wait Until Home Page load.
-        Thread.sleep(3000);
+        // Create Object from the Home Page
         homeObj = new HomePage(driver);
+
+        // Accept the Cookies if exist
+        if(homeObj.getAcceptCookiesBtn().isDisplayed()){
+            homeObj.getAcceptCookiesBtn().click();
+        }
 
         // Open Blog Web Page
         homeObj.getBlogLink().click();
@@ -73,7 +72,8 @@ public class EmptyFieldTest extends TestBase {
 
 
         // Wait 3 seconds until Subscription form appears
-        Thread.sleep(3000);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.visibilityOf(blogObj.getSubscribeBtn()));
 
         // Enter the Data
         blogObj.getLastNameTxtField().sendKeys(lastName);
@@ -85,20 +85,20 @@ public class EmptyFieldTest extends TestBase {
         Assert.assertEquals(noOfErrorMessages, 1);
         Assert.assertTrue(blogObj.getErrorMessages().get(0).getText().contains("This field is required"));
 
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
 
     }
 
 
     @Test(priority = 2)
-    public void subscribe_With_Empty_Last_Name_Field() throws InterruptedException {
-
-        // Wait Until Home Page Load
-        Thread.sleep(3000);
+    public void subscribe_With_Empty_Last_Name_Field() {
 
         // Create Object from Home Page
         homeObj = new HomePage(driver);
+
+        // Accept the Cookies if exist
+        if(homeObj.getAcceptCookiesBtn().isDisplayed()){
+            homeObj.getAcceptCookiesBtn().click();
+        }
 
         // Open Blog Web Page
         homeObj.getBlogLink().click();
@@ -106,8 +106,9 @@ public class EmptyFieldTest extends TestBase {
         // Create Object from Blog Web Page
         blogObj = new BlogPage(driver);
 
-        // Wait Until Subscription Form Appears
-        Thread.sleep(3000);
+        // Wait Until Subscribe Button Appears
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.visibilityOf(blogObj.getSubscribeBtn()));
 
         // Enter The Data
         blogObj.getFirstNameTxtField().sendKeys(firstName);
@@ -119,28 +120,27 @@ public class EmptyFieldTest extends TestBase {
         Assert.assertEquals(noOfErrorMessages, 1);
         Assert.assertTrue(blogObj.getErrorMessages().get(0).getText().contains("This field is required"));
 
-        // Redirect to The Home Page
-        blogObj.getHomePageLink().click();
-
     }
 
     @Test(priority = 3)
-    public void subscribe_With_Empty_Email_Field() throws InterruptedException {
-
-        // Wait Until Home Page Load
-        Thread.sleep(3000);
+    public void subscribe_With_Empty_Email_Field() {
 
         // Create Object from the Home Page
         homeObj = new HomePage(driver);
 
+        if (homeObj.getAcceptCookiesBtn().isDisplayed()){
+            homeObj.getAcceptCookiesBtn().click();
+        }
+
         // Open Blog Web Page.
         homeObj.getBlogLink().click();
 
-        // Craete Object from Blog Web Page.
+        // Create Object from Blog Web Page.
         blogObj = new BlogPage(driver);
 
         // Wait Until Subscription Form Appears
-        Thread.sleep(3000);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.visibilityOf(blogObj.getSubscribeBtn()));
 
         // Enter The Data
         blogObj.getFirstNameTxtField().sendKeys(firstName);
@@ -151,9 +151,6 @@ public class EmptyFieldTest extends TestBase {
         int noOfErrorMessages = blogObj.getErrorMessages().size();
         Assert.assertEquals(noOfErrorMessages, 1);
         Assert.assertTrue(blogObj.getErrorMessages().get(0).getText().contains("This field is required"));
-
-        // Redirect to Home Page
-        blogObj.getHomePageLink().click();
 
     }
 
